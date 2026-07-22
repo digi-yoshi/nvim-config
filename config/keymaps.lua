@@ -16,6 +16,9 @@ vim.keymap.set("n", "X", '"_D', { desc = "Delete line tail without yank" })
 vim.keymap.set("x", "x", '"_x', { desc = "Delete selection without yank" })
 vim.keymap.set("o", "x", "d")
 
+-- ターミナルをEsc連打で抜ける
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+
 -- <leader>b~ で現在のバッファのパスをコピー
 -- y:ファイル名/Y:フルパス/r:相対パス/l:ライン
 local function copy_buffer(expr, message)
